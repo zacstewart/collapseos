@@ -19,6 +19,13 @@ manage to build and install Collapse OS without external resources (i.e.
 internet) on a machine of her design, built from scavenged parts with low-tech
 tools.
 
+## Forth reboot in process
+
+You are currently looking at the `master` branch of the project, which is the
+first incarnation of Collapse OS, written in z80 assembler. A
+[Forth reboot][forth-issue] is being worked on and will soon replace this
+branch. You can look at it on the `forth` branch.
+
 ## See it in action
 
 Michael Schierl has put together [a set of emulators running in the browser that
@@ -53,9 +60,9 @@ For a general discussion of Collapse OS and the ecosystem of technologies and id
 
 A more traditional [mailing list][listserv] and IRC (#collapseos on freenode) channels are also maintained.
 
-[libz80]: https://github.com/ggambetta/libz80
 [web]: https://collapseos.org
 [jsemul]: https://schierlm.github.io/CollapseOS-Web-Emulator/
 [discussion]: https://www.reddit.com/r/collapseos
 [listserv]: http://lists.sonic.net/mailman/listinfo/collapseos
+[forth-issue]: https://github.com/hsoft/collapseos/issues/4
 
