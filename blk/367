@@ -7,4 +7,3 @@
 : / /MOD NIP ;
 : MOD /MOD DROP ;
 : ALLOT HERE +! ;
-: LEAVE R> R> DROP I 1- >R >R ;
