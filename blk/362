@@ -2,15 +2,9 @@
     ( '0': ASCII 0x30 'b': 0x62 0x6230: 25136 )
     DUP @ 25136 = NOT IF 0 EXIT THEN    ( a 0 )
     ( We have "0b" prefix )
-    2+
-    0  ( a r )
-    BEGIN
-    SWAP C@+                               ( r a+1 c )
-    ?DUP NOT IF DROP 1 EXIT THEN           ( r 1 )
-    _                                      ( r a n )
-    DUP 0< IF ROT 2DROP 0 EXIT THEN        ( a 0 )
-    ROT 2 * +                              ( a r*2+n )
-    AGAIN
-;
-
-
+    DUP 1- C@ ( a len )
+    0 SWAP ( len ) 2 DO ( a r )
+        OVER I + C@ ( a r c ) _ ( a r n )
+        DUP 0< IF 2DROP 0 UNLOOP EXIT THEN
+        SWAP 1 LSHIFT + ( a r*2+n ) LOOP
+    NIP 1 ;
