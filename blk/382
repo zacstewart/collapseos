@@ -4,7 +4,7 @@
     AGAIN ;
 : LIT"
     34 , ( litWord ) H@ 0 C, ,"
-    DUP H@ -^ 1- ( a len ) SWAP C! 0 C,
+    DUP H@ -^ 1- ( a len ) SWAP C!
 ; IMMEDIATE
 : ." [COMPILE] LIT" COMPILE (print) ; IMMEDIATE
 : ABORT" [COMPILE] ." COMPILE ABORT ; IMMEDIATE
