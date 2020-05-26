@@ -5,7 +5,7 @@ PC ORG @ 4 + ! ( find )
     BC PUSHqq,
     HL PUSHqq,
 	( First, figure out string len )
-    HL DECss, A (HL) LDrr, A ORr,
+    A (HL) LDrr, A ORr,
 	( special case. zero len? we never find anything. )
     IFNZ, ( fail-B296 )
 ( Let's do something weird: We'll hold HL by the *tail*.

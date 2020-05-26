@@ -1,7 +1,7 @@
 : EMIT
     ( 0x53==(emit) override )
     0x53 RAM+ @ ?DUP IF EXECUTE ELSE (emit) THEN ;
-: (print) 1- C@+ ( a len ) 0 DO C@+ EMIT LOOP DROP ;
+: (print) C@+ ( a len ) 0 DO C@+ EMIT LOOP DROP ;
 : BS 8 EMIT ; : LF 10 EMIT ; : CR 13 EMIT ;
 : CRLF CR LF ; : SPC 32 EMIT ;
 : NL 0x0a RAM+ @ ( NLPTR ) ?DUP IF EXECUTE ELSE CRLF THEN ;

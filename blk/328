@@ -1,6 +1,5 @@
 CODE S=
     DE POPqq, HL POPqq, chkPS,
-    HL DECss, DE DECss,
     LDA(DE),
     (HL) CPr,
     IFZ, ( same size? )
