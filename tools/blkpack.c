@@ -61,6 +61,7 @@ int main(int argc, char *argv[])
             fprintf(stderr, "blk %s has more than 16 lines\n", ep->d_name);
         }
         free(line);
+        fclose(fp);
     }
     fwrite(buf, 1024, blkcnt, stdout);
     free(buf);
